@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--======== Title & Favicon ========-->
+    <title>EquiHire360 | Dashboard</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <!--======== CSS ========-->
+    <link href="./assets/css/nice-select.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/spacing.min.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/responsive.css" rel="stylesheet">  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="position-relative">
+                        <div class="logo position-relative d-flex align-items-center">
+                            <a href="index.html"><img src="./assets/img/logo/logo.png" alt=""></a>
+                        </div>
+                        <!-- Hamburger Icon -->
+                        <div class="sidebar-overlay"></div>
+                        <div class="hamburger d-flex flex-column el-absolute center-right d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <!-- Header Sidebar -->
+                        <div class="header-sidebar">
+                            <div class="sidebar-inner d-flex flex-column">
+                                <div class="sidebar-menu">
+                                    <img src="./assets/img/logo/logo.png" alt="">
+                                    <ul>
+                                        <li><a href="./job-posting.html">Jobs</a></li>
+                                        <li><a href="./candidate.html">Candidates</a></li>
+                                        <li><a href="./dei-dashboard.html">DEI Analytics</a></li>
+                                        <li><a href="./dashboard.html">Dashboard</a></li>
+                                        <li><a href="./setting-profile.html">Settings</a></li>
+                                    </ul>
+                                </div>
+                                <div class="sidebar-others flex-1 d-flex flex-column justify-content-between text-center">
+                                    <div class="sidebar-btn mt-30">
+                                        <a href="./register.html" class="site-btn">Sign Up</a>
+                                        <a href="./login.html" class="site-btn">Login</a>
+                                    </div>
+                                    <div class="sidebar-copyright">© 2024 Company Name</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 text-end d-none d-lg-block">
+                    <div class="d-flex align-items-center justify-content-end gap-4">
+                        <div class="mainmenu">
+                            <ul>
+                                <li><a href="./job-posting.html">Jobs</a></li>
+                                <li><a href="./candidate.html">Candidates</a></li>
+                                <li><a href="./dei-dashboard.html">DEI Analytics</a></li>
+                                <li><a href="./dashboard.html">Dashboard</a></li>
+                                <li><a href="./setting-profile.html">Settings</a></li>
+                            </ul>
+                        </div>
+                        <div class="signup-menu d-flex gap-3">
+                            <a href="./register.html" class="site-btn btn-transparent">Sign Up</a>
+                            <a href="./login.html" class="site-btn">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER end -->
+
+    <main class="main">
+
+        <!-- DEI Metrics -->
+        <section class="section pt-60 pt-xs-30">
+            <div class="container">
+                <div class="row g-4 g-lg-5">
+                    <div class="col-md-6">
+                        <div class="single-box">
+                            <div class="dei-matrics">
+                                <h4 class="mb-20">DEI Metrics</h4>
+                                <!-- <img class="w-100" src="./assets/img/Dashboard/chart-1.png" alt=""> -->
+                                <canvas id="myChart"></canvas>
+                                <canvas id="myChart2" class="mt-5"></canvas>
+                                <canvas id="myChart3" class="mt-5"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="single-box mt-30">
+                            <div class="recent-post">
+                                <h4 class="mb-20">Candidate Summaries</h4>
+                                <div class="single-box-2 d-flex flex-column gap-3">
+                                    <div class="list-item">
+                                        <h5 class="mb-0">Candidate Name</h5>
+                                        <p class="mb-0">Qualifications Summary</p>
+                                    </div>
+                                    <div class="list-item">
+                                        <h5 class="mb-0">Candidate Name</h5>
+                                        <p class="mb-0">Qualifications Summary</p>
+                                    </div>
+                                    <div class="list-item">
+                                        <h5 class="mb-0">Candidate Name</h5>
+                                        <p class="mb-0">Qualifications Summary</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="site-btn mt-20 mt-xs-10">View All Candidates</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single-box">
+                            <div class="recent-post">
+                                <h4 class="mb-20">Recent Job Postings</h4>
+                                <div class="single-box-2 d-flex flex-column gap-3">
+                                    <div class="list-item">
+                                        <h5 class="mb-0">Job Title</h5>
+                                        <p class="mb-0">Job Description</p>
+                                    </div>
+                                    <div class="list-item">
+                                        <h5 class="mb-0">Job Title</h5>
+                                        <p class="mb-0">Job Description</p>
+                                    </div>
+                                    <div class="list-item">
+                                        <h5 class="mb-0">Job Title</h5>
+                                        <p class="mb-0">Job Description</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="site-btn mt-20 mt-xs-10">View All Job Postings</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-area mt-70 mt-xs-30">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-8">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="social-links d-flex gap-4 justify-content-center justify-content-md-end mt-xs-10">
+                        <a href="#"><img src="./assets/img/icons/fb.svg" alt=""></a>
+                        <a href="#"><img src="./assets/img/icons/twitter.svg" alt=""></a>
+                        <a href="#"><img src="./assets/img/icons/ins.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER end -->
+
+
+    <!--======== SCROLL UP// ========-->
+    <div class="scroll-up"><img src="./assets/img/icons/arrow-up.svg" alt=""></div>
+    <!--======== SCROLL UP// ========-->
+
+    <!-- JS HERE -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/nice-select.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+
+      
+        new Chart(document.getElementById('myChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Male', 'Female', 'Non-Binary'],
+                datasets: [{
+                    label: 'Progress',
+                    data: [100, 100, 100],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)'
+                    ],
+                    borderWidth: 1, 
+                }]
+            } 
+        });  
+      
+        new Chart(document.getElementById('myChart2'), {
+            type: 'bar',
+            data: {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                datasets: [{
+                    label: 'Progress',
+                    data: [63, 75, 82, 91],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(255, 159, 64, 0.5)',
+                        'rgba(255, 205, 86, 0.5)',
+                        'rgba(75, 192, 192, 0.6)', 
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+        new Chart(document.getElementById('myChart3'), {
+            type: 'line',
+            data: {
+                labels: ['Jan',"Feb","Mar","Apr","May","Jun"],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [45, 60, 75, 80, 90, 100],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            } ,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+
+
+
+      </script>
+</body>
+</html>
